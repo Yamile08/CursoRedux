@@ -1,4 +1,4 @@
-// console.log(' Hola Hola Hola')
+// console.log(' Hola Hola')
 
 const $form = document.getElementById('form');
 $form.addEventListener('submit', handleSubmit);

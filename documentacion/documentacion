@@ -42,3 +42,17 @@ El estado va a actualizar tu vista (interfaz/UI)
 
 Redux debe utilizarse de una manera responsable, para no caer en el error de aplicar sobre ingeniería (exceso de complejidad) 
 a tus aplicaciones sencillas … eso sería contraproducente a lo que intenta resolver Redux.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Entendiendo y agregando un Store
+
+Store = Es la parte más importante de entender cuando estamos haciendo algo en Redux.
+
+Datos importantes del Store:
+
+* Contiene el estado de la aplicación.
+* Se puede acceder al estado con el método getState()
+* Se puede actualizar el estado con el método dispatch(action)
+* Escucha cambios con el método **subscribe(listener)
+* Deja de escuchar cambios retornando la función del método subscribe(listener)
