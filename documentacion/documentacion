@@ -73,3 +73,15 @@ const store = createStore(
   initialState,
   enhancer
 )
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Definiendo acciones a manejar
+
+Action = Bloque de información que envía datos a la aplicación.
+Datos importantes:
+
+*Se envían usando el método dispatch() del store.
+*Son la única fuente de información del store.
+*Son objetos planos de JavaScript.
+

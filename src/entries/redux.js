@@ -8,7 +8,15 @@ function handleSubmit(event) {
   const data = new FormData($form);
   const title = data.get('title');
   console.log(title);
+  store.dispatch({  //dispatch es un metodo de store que recibe nuestra accion
+    type: 'ADD_SONG', //type es lo unico obligatorio que recibiria nuestra accion y tenemos que mandarle un string que funcione como una
+                      // constante, en este caso ugregar una cancion
+    payload: {
+      title,
+    }
+  })
 }
+
 const initialState = [
   {
     "title": "Despacito",
