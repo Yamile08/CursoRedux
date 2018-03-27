@@ -137,3 +137,12 @@ npm install --save react-redux
 Una vez que termine el proceso verás en el archivo package.json la dependencia instalada.
 Por último corre el proyecto utilizando el siguiente comando:
 npm run build:dev
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Puliendo la estructura de datos de Platzi Video
+
+Debemos asegurar que los datos estén bien estructurados
+Nuestra data viene de la siguiente forma:
+Categorias tienen playlist.
+Playlist tienen medias.
