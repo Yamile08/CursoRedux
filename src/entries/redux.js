@@ -29,9 +29,9 @@ const initialState = [
   }
 ]
 
-const reducer = function(state, action) {
+const reducer = function(state, action) { //Devuelve el siguiente estado 
   switch (action.type) {
-    case 'ADD_SONG':
+    case 'ADD_SONG': //Agrega una nueva cancion
       return [...state, action.payload]
     default:
       return state
@@ -45,12 +45,22 @@ const store = createStore( //tres paramentros que recibe el Store
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 )
 
-const $container = document.getElementById('playlist');
-const playlist = store.getState();
-playlist.forEach((item) => {
-  const template = document.createElement('p');
-  template.textContent = item.title;
-  $container.appendChild(template);
-})
+function render() {
+  const $container = document.getElementById('playlist');
+  const playlist = store.getState();
+  $container.innerHTML = ''; //Borrar todo lo que halla dentro del contenedor antes de que se itere, para no repetir los items anteriores cuando se este agregando un nuevo item
+  playlist.forEach((item) => {
+    const template = document.createElement('p');
+    template.textContent = item.title;
+    $container.appendChild(template);
+  })
+}
+render();
 
-console.log(store.getState())
+function handleChange() {
+  render();
+}
+
+store.subscribe(handleChange)
+
+// console.log(store.getState())
