@@ -125,3 +125,15 @@ Resume del flujo de eventos
 * el cambio del estado es detectado por el store y se ejecuta store.subscribe(handle) … con la función (handle) que manejará lo que sucede cuando ha cambiado el estado
 * en la función (handle) recibida por store.subscribe(handle) se invoca la actualización de la UI a partir del nuevo estado creado
 * queda establecido el nuevo estado(state) y queda de nuevo atento el evento (listener) en la UI
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Instalando React-redux
+
+github.com/reactjs/react-redux
+
+Vamos a la terminal y ponemos el siguiente comando:
+npm install --save react-redux
+Una vez que termine el proceso verás en el archivo package.json la dependencia instalada.
+Por último corre el proyecto utilizando el siguiente comando:
+npm run build:dev
