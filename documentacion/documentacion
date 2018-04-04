@@ -166,3 +166,19 @@ connect([mapStateToProps], [mapDispatchToProps], [mergeProps], [options]
 [mapStateToProps(state, [ownProps]): stateProps] Es una función en la que si el argumento está especificado el nuevo componente se 
 suscribe para recibir actualizaciones, lo que significa que cada vez que el store es actualizado la función mapStateToProps será 
 llamada para obtener las propiedades.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Agregando un Reducer para manejar los datos
+
+Hagamos la lógica de actualización de datos:
+Utilizaremos un reducer el cual manejará los datos de la aplicación.
+
+Crearemos una nueva carpeta llamada reducers y dentro haremos un archivo llamado data.js
+
+En ese archivo colocaremos una función que resuelva que dependiendo el tipo de acción que se reciba se ejecutará algo específico.
+
+Importaremos el archivo a nuestro archivo home.js - entries
+
+----------------------------------------------------------------------------------------------------------------------------------------

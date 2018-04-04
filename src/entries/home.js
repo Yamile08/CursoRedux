@@ -7,6 +7,7 @@ import data from '../api.json';
 import { Provider } from 'react-redux'; //Provider es un componente de orden superior que sirve para heredar elementos a los componentes hijos.
 
 import { createStore } from 'redux';
+import reducer from '../reducers/data';
 
 const initialState = {
   data: {
