@@ -116,7 +116,7 @@ El reducer se iguala a una función, esta función recibe dos parámetros que so
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-Resume del flujo de eventos
+Resumen del flujo de eventos
 
 * Se establece un State (estado) inicial con el que se crea originalmente el store mediante el método createStore de redux
 * el state inicial define los contenidos que se muestran en la UI mediante store.getState() y la función render()

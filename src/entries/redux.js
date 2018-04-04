@@ -17,15 +17,15 @@ function handleSubmit(event) {
   })
 }
 
-const initialState = [
+const initialState = [  //el estado inicial va a ser una lista de objetos
   {
-    "title": "Despacito",
+    "title": "Despacito", //objeto 1
   },
   {
-    "title": "One more time",
+    "title": "One more time", //objeto 2
   },
   {
-    "title": "Echame la culpa",
+    "title": "Echame la culpa", //objeto 3
   }
 ]
 
@@ -42,7 +42,7 @@ const reducer = function(state, action) { //Devuelve el siguiente estado
 const store = createStore( //tres paramentros que recibe el Store
   reducer,
   initialState,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), //enhancer
 )
 
 function render() {
