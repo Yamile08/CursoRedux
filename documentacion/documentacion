@@ -146,3 +146,23 @@ Debemos asegurar que los datos estén bien estructurados
 Nuestra data viene de la siguiente forma:
 Categorias tienen playlist.
 Playlist tienen medias.
+
+---------------------------------------------------------------------------------------------------------------------------------------
+Integrando el Store con Provider....
+
+Utilizaremos un Provider que nos provee React Redux para asignar todos los datos a la aplicación.
+Un Provider es un componente de orden superior que sirve para heredar elementos a los componentes hijos.
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Conectando datos a los componentes
+
+Conectaremos datos en específico dentro de nuestros componentes.
+Primero obtendremos exclusivamente los datos que utiliza el componente.
+
+Utilizaremos lo siguiente:
+connect([mapStateToProps], [mapDispatchToProps], [mergeProps], [options]
+
+[mapStateToProps(state, [ownProps]): stateProps] Es una función en la que si el argumento está especificado el nuevo componente se 
+suscribe para recibir actualizaciones, lo que significa que cada vez que el store es actualizado la función mapStateToProps será 
+llamada para obtener las propiedades.

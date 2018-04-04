@@ -7,6 +7,8 @@ import Modal from '../../widgets/components/modal';
 import HandleError from '../../error/containers/handle-error';
 import VideoPlayer from '../../player/containers/video-player';
 
+import { connect } from 'react-redux'; //Conectando datos a los componentes
+
 class Home extends Component {
   state = { //como arranca nuestro modal, que no se ve
     modalVisible: false,
@@ -28,7 +30,7 @@ class Home extends Component {
         <HomeLayout>
           <Related />
           <Categories
-            categories={this.props.data.categories}
+            categories={this.props.categories}
             handleOpenModal={this.handleOpenModal}
           />
           { //condicional, si el modal es 
@@ -51,4 +53,11 @@ class Home extends Component {
   }
 }
 
-export default Home
+function mapStateToProps(state, props) {
+  return {
+    categories: state.data.categories
+  }
+
+}
+
+export default connect(mapStateToProps)(Home) //Connect para enviarle nuevas propiedades a mi Home, propiedades que vienen desde mi store de Redux

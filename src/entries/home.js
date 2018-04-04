@@ -8,7 +8,7 @@ import { Provider } from 'react-redux'; //Provider es un componente de orden sup
 
 import { createStore } from 'redux';
 
-/* const initialState = {
+const initialState = {
   data: {
     ...data
   }
@@ -21,7 +21,7 @@ const store = createStore(
 );
 
 console.log(store.getState());
- */
+
 
 const homeContainer = document.getElementById('home-container'); // Referenciamos un elemento con ID home-container
 
