@@ -182,3 +182,14 @@ En ese archivo colocaremos una función que resuelva que dependiendo el tipo de 
 Importaremos el archivo a nuestro archivo home.js - entries
 
 ----------------------------------------------------------------------------------------------------------------------------------------
+
+Manejando una acción para búsqueda de videos
+
+* Hagamos funcionar nuestra aplicación enviándole acciones para cambiar el estado.
+
+* Utilizaremos un formulario de búsqueda para encontrar un video.
+
+* Utilizaremos dispatch para enviar la acción
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
