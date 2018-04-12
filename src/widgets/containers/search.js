@@ -9,7 +9,7 @@ class SearchContainer extends Component {
   handleSubmit = event => { //para prevenir que la pagina recarge
     event.preventDefault();
     console.log(this.input.value, 'submit')
-    this.props.dispatch({
+    this.props.dispatch({ //Aqui se envia la accion al reducer
       type: 'SEARCH_VIDEO',
       payload: {
         query: this.input.value,
@@ -27,7 +27,7 @@ class SearchContainer extends Component {
   render() {
     return (
       <Search
-        setRef={this.setInputRef} 
+        setRef={this.setInputRef}
         handleSubmit={this.handleSubmit}
         handleChange={this.handleInputChange}
         value={this.state.value}

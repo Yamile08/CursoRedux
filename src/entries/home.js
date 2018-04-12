@@ -11,11 +11,11 @@ import reducer from '../reducers/data';
 
 const initialState = {
   data: {
-    ...data
+    ...data //descomponiendo data dentro de data
   }
 }
 
-const store = createStore(
+const store = createStore(  //creando el store que recibe tres parametros
   (state) => state,
   initialState,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
@@ -35,4 +35,3 @@ render(
     </Provider>
   , homeContainer);
    //la propiedad data va a recibir los datos que vienen desde el api.json
-

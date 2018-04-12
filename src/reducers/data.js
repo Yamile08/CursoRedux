@@ -1,4 +1,4 @@
-function data(state, action) {  //creamos la funcion que recibe dos parametros state y action
+function data(state, action) {  //creamos la funcion que recibe dos parametros state y action /SE ESTA CREANDO EL REDUCER
   switch (action.type) {
     case 'SEARCH_VIDEO': {
       // action.payload.query

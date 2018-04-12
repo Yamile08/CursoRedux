@@ -26,7 +26,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <HandleError> 
+      <HandleError>
         <HomeLayout>
           <Related />
           <Categories
@@ -34,7 +34,7 @@ class Home extends Component {
             handleOpenModal={this.handleOpenModal}
             search={this.props.search}
           />
-          { //condicional, si el modal es 
+          { //condicional, si el modal es
             this.state.modalVisible &&
             <ModalContainer>
               <Modal
@@ -56,8 +56,8 @@ class Home extends Component {
 
 function mapStateToProps(state, props) {
   return {
-    categories: state.data.categories,
-    search: state.search
+    categories: state.data.categories, //Gracias a la funcion mapStateToProps se le estan devolviendo nuevas propiedades a mi componente de Home
+    search: state.search               // y se estan llenando de los datos que vienen desde state
   }
 
 }
