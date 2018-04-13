@@ -24,7 +24,6 @@ const store = createStore(  //creando el store que recibe tres parametros
 
 console.log(store.getState());
 
-
 const homeContainer = document.getElementById('home-container'); // Referenciamos un elemento con ID home-container
 
 // const holaMundo = <h1>Hola yamile</h1>; // Insertamos en una constante lo que queremos renderizar
