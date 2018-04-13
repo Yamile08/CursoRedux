@@ -11,7 +11,8 @@ import reducer from '../reducers/data';
 
 const initialState = {
   data: {
-    ...data //descomponiendo data dentro de data
+    ...data, //descomponiendo data dentro de data
+    search: [], //esta es la usqueda y como estado inicial una lista y/o array vacio
   }
 }
 

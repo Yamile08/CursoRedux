@@ -4,7 +4,7 @@ function data(state, action) {  //creamos la funcion que recibe dos parametros s
       // action.payload.query
       let results = [];
       if (action.payload.query) {
-        const list = state.data.categories[2].playlist;
+        const list = state.data.categories[2].playlist; //Hace una busqueda dentro del api
         results = list.filter((item) => {
           return item.author.includes(action.payload.query)
         })

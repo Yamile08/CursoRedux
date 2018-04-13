@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Search from '../components/search';
-import { connect } from 'react-redux';
+import { connect } from 'react-redux';  //CON CONNECT OBTENEMOS EL DISPATCH
 
 class SearchContainer extends Component {
   state = {
@@ -12,7 +12,7 @@ class SearchContainer extends Component {
     this.props.dispatch({ //Aqui se envia la accion al reducer
       type: 'SEARCH_VIDEO',
       payload: {
-        query: this.input.value,
+        query: this.input.value,//Aqui envia el texto de la busqueda
       }
     })
   }
