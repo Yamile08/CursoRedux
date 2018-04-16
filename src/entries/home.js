@@ -1,37 +1,36 @@
-// Importamos dependencias de React
-import React from 'react'; //React es la dependencia para crear nuestros componentes, las piezas de la aplicación
-import { render } from 'react-dom';  //react-dom nos sirve para renderizar esos componentes en el navegador
+import React from 'react';
+import { render } from 'react-dom';
 import Home from '../pages/containers/home';
-//import Playlist from './src/playlist/components/playlist'; //llamar y/o importar a media
+// import Playlist from './src/playlist/components/playlist';
 import data from '../api.json';
-import { Provider } from 'react-redux'; //Provider es un componente de orden superior que sirve para heredar elementos a los componentes hijos.
+// console.log('Hola mundo!' )
+import { Provider } from 'react-redux';
 
 import { createStore } from 'redux';
 import reducer from '../reducers/data';
 
 const initialState = {
   data: {
-    ...data, //descomponiendo data dentro de data
-    search: [], //esta es la usqueda y como estado inicial una lista y/o array vacio
-  }
+    ...data,
+  },
+  search: [],
 }
 
-const store = createStore(  //creando el store que recibe tres parametros
-  (state) => state,
+const store = createStore(
+  reducer,
   initialState,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 console.log(store.getState());
 
-const homeContainer = document.getElementById('home-container'); // Referenciamos un elemento con ID home-container
+const homeContainer = document.getElementById('home-container')
 
-// const holaMundo = <h1>Hola yamile</h1>; // Insertamos en una constante lo que queremos renderizar
+// ReactDOM.render(que voy a renderizar, donde lo haré);
+// const holaMundo = <h1>hola Estudiante!</h1>;
 
-//ReactDOM.render(que voy a renderizar, donde lo hare);
 render(
-    <Provider store={store}>
-      <Home />
-    </Provider>
-  , homeContainer);
-   //la propiedad data va a recibir los datos que vienen desde el api.json
+  <Provider store={store}>
+    <Home />
+  </Provider>
+, homeContainer);

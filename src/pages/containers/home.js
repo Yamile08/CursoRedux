@@ -6,14 +6,13 @@ import ModalContainer from '../../widgets/containers/modal';
 import Modal from '../../widgets/components/modal';
 import HandleError from '../../error/containers/handle-error';
 import VideoPlayer from '../../player/containers/video-player';
-
-import { connect } from 'react-redux'; //Conectando datos a los componentes
+import { connect } from 'react-redux';
 
 class Home extends Component {
-  state = { //como arranca nuestro modal, que no se ve
+  state = {
     modalVisible: false,
   }
-  handleOpenModal = (media) => { //mostrara el video
+  handleOpenModal = (media) => {
     this.setState({
       modalVisible: true,
       media
@@ -34,16 +33,16 @@ class Home extends Component {
             handleOpenModal={this.handleOpenModal}
             search={this.props.search}
           />
-          { //condicional, si el modal es
+          {
             this.state.modalVisible &&
             <ModalContainer>
               <Modal
                 handleClick={this.handleCloseModal}
               >
-              <VideoPlayer
+                <VideoPlayer
                   autoplay
-                  src={this.state.media.src}  //se pasa el src del video
-                  title={this.state.media.title} //se pasa el titulo del video
+                  src={this.state.media.src}
+                  title={this.state.media.title}
                 />
               </Modal>
             </ModalContainer>
@@ -56,10 +55,10 @@ class Home extends Component {
 
 function mapStateToProps(state, props) {
   return {
-    categories: state.data.categories, //Gracias a la funcion mapStateToProps se le estan devolviendo nuevas propiedades a mi componente de Home
-    search: state.search               // y se estan llenando de los datos que vienen desde state
+    categories: state.data.categories,
+    search: state.search
   }
 
 }
 
-export default connect(mapStateToProps)(Home) //Connect para enviarle nuevas propiedades a mi Home, propiedades que vienen desde mi store de Redux
+export default connect(mapStateToProps)(Home)

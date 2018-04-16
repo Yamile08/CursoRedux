@@ -1,10 +1,10 @@
-function data(state, action) {  //creamos la funcion que recibe dos parametros state y action /SE ESTA CREANDO EL REDUCER
+function data(state, action) {
   switch (action.type) {
     case 'SEARCH_VIDEO': {
       // action.payload.query
       let results = [];
       if (action.payload.query) {
-        const list = state.data.categories[2].playlist; //Hace una busqueda dentro del api
+        const list = state.data.categories[2].playlist;
         results = list.filter((item) => {
           return item.author.includes(action.payload.query)
         })
@@ -20,3 +20,5 @@ function data(state, action) {  //creamos la funcion que recibe dos parametros s
 }
 
 export default data;
+
+
