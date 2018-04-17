@@ -2,8 +2,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import Home from '../pages/containers/home';
 // import Playlist from './src/playlist/components/playlist';
-import data from '../api.json';
-import normalizedData from '../schemas/index.js'; //Normalizando Datos
+//import data from '../api.json';
+import data from '../schemas/index.js'; //Normalizando Datos
 // console.log('Hola mundo!' )
 import { Provider } from 'react-redux';
 
@@ -14,7 +14,9 @@ console.log(normalizedData); //Normalizando Datos
 
 const initialState = {
   data: {
-    ...data,
+      // ...data,
+      entities: data.entities, //a los elementos de busqueda se les llama entities-entidades
+      categories: data.result.categories, 
   },
   search: [],
 }
