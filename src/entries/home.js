@@ -10,7 +10,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducer from '../reducers/data';
 
-console.log(normalizedData); //Normalizando Datos
+console.log(data); //Normalizando Datos
 
 const initialState = {
   data: {
