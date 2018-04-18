@@ -54,13 +54,15 @@ class Home extends Component {
 }
 
 function mapStateToProps(state, props) {
-  const categories = state.data.categories.map((categoryId) => { //Mapiamos la lista para obtener esas categories, ese map recibe lo que tiene cada elemento que se esta iterando que seria el id de la category
-    return state.data.entities.categories[categoryId] //Aqui se devuelve el objeto de la category
+  //en la linea siguientevamos a utilizar metodos inmutables para remplazar esto state.data.categories.map((categoryId) por state.get('data').get('categories').map((categoryId) => {
+    //PONEMOS .get PARA OBTENER UNA key DE MI MAPA POR QUE state SERIA EL MAPA PRINCIPAL QUE SERIA MI ESTADO INICIAL QUE TENDRIA UN key QUE SE LLAMA data
+  const categories = state.get('data').get('categories').map((categoryId) => { //Mapiamos la lista para obtener esas categories, ese map recibe lo que tiene cada elemento que se esta iterando que seria el id de la category
+    return state.get('data').get('entities').get('categories').get(categoryId) //Aqui se devuelve el objeto de la category
   })
 
   return {
     categories: categories,
-    search: state.data.search
+    search: state.get('data').get('search')  
   }
 
 }
